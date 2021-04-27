@@ -1,0 +1,263 @@
+$bg-color: #000000;
+$font-color: #ffffff;
+
+body {
+  color: $font-color;
+  font-family: "Shippori Mincho", serif;
+  background-color: $bg-color;
+  margin: 0　auto;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    overflow: hidden;
+  }
+}
+// ファーストビュー部分
+.first-view {
+  height: 600px;
+  position: relative;
+  &__img {
+    background-image: url("img/firstview.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    &-title {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    &-text {
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+}
+
+// header部分
+.header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 40px;
+  height: 70px;
+  &__logo {
+    width: 80px;
+    font-size: 28px;
+    margin-right: 100px;
+  }
+  &__nav-list {
+    display: flex;
+    &-item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__hamb {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    &__nav {
+      display: none;
+    }
+    &__hamb {
+      display: block;
+      float: right;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    &__nav {
+      display: none;
+    }
+    &__hamb {
+      display: block;
+      float: right;
+    }
+  }
+}
+// topics部分
+.topics {
+  display: flex;
+  justify-content: space-between;
+  &-panel__content {
+    position: relative;
+    bottom: 50%;
+    right: 0;
+    padding: 0 25px;
+    margin-bottom: -105px;
+    &-title {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+    &-text {
+      line-height: 1.5;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .topics-panel__content-title {
+    font-size: 20px;
+  }
+  .topics-panel__content-text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .topics {
+    display: block;
+    &-panel__content {
+      position: relative;
+      top: -100px;
+    }
+  }
+}
+
+// Style部分
+.style {
+  background: linear-gradient(to bottom, $bg-color, $font-color);
+  &__all {
+    width: 70%;
+    margin: 0 auto;
+  }
+  &__title {
+    font-size: 40px;
+    margin: 50px 0;
+  }
+  &__img-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__img {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .style__all {
+    width: 80%;
+  }
+  .style__title {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .style__img {
+    width: 50%;
+  }
+  .style__all {
+    width: 90%;
+  }
+}
+
+// about部分
+.about {
+  &__all {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+  }
+  &__img {
+    width: 40%;
+    margin: 0 50px;
+  }
+  &__content {
+    width: 40%;
+    margin: 0 50px;
+    position: relative;
+    &-all {
+      position: absolute;
+      top: 20%;
+      left: 0;
+    }
+  }
+  &__sub-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-size: 40px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  &__text {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  &__button {
+    width: 200px;
+    border: 2px solid $font-color;
+    font-size: 17px;
+    text-align: center;
+    padding: 20px 0;
+    display: block;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    height: 600px;
+    &__content-all {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    height: 900px;
+    &__all {
+      display: block;
+    }
+    &__img {
+      width: 80%;
+      margin: 0 auto;
+    }
+    &__content {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &__button {
+      margin: 0 auto;
+    }
+  }
+}
+
+// フッター部分
+.footer {
+  text-align: center;
+  font-size: 12px;
+}
